@@ -1,4 +1,4 @@
-# ShutterReached Site
+# ShutterReach Site
 
 This is the website for our English brand project
 
