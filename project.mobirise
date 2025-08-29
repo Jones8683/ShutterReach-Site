@@ -60,7 +60,7 @@
     "versionPublish": "6.0.6",
     "imageResize": true,
     "screenshot": "screenshot.png",
-    "favicon": false,
+    "favicon": "@PROJECT_PATH@/assets/images/icon-128x128.png",
     "mbrsiteDomain": "316nlvp3up",
     "usedWebp": false,
     "robotsSwitcher": false,
@@ -74,7 +74,7 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
+        "title": "ShutterReach Homepage",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
