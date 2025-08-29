@@ -5,7 +5,7 @@
       "name": "startm5",
       "title": "StartM5",
       "styling": {
-        "primaryColor": "#ff4552",
+        "primaryColor": "#ed9b00",
         "secondaryColor": "#4552ff",
         "successColor": "#000000",
         "infoColor": "#01563b",
@@ -34,7 +34,10 @@
       "nameSelectPreset": "small",
       "presetSourceTheme": "startm5",
       "additionalSetColors": [
-        "#eb4e1a"
+        "#eb4e1a",
+        "#dd772b",
+        "#b53615",
+        "#ed9b00"
       ]
     },
     "path": "@PROJECT_PATH@",
