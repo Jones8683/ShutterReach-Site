@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          persist-credentials: true
 
       - name: Clean Mobirise footer
         run: |
@@ -23,4 +21,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add index.html
           git commit -m "Pre-Build Cleanup" || echo "No changes to commit"
-          git push
+          git push https://$PAT_TOKEN@github.com/Jones8683/ShutterReach-Site.git HEAD:main
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
