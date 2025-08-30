@@ -13,14 +13,15 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./
+
       - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
