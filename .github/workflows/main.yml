@@ -14,21 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Clean Mobirise junk
         run: |
-          # Remove the exact long <section> ... </section> block
-          sed -i '/No Code Website Builder/,+5d' index.html
-
-          # Remove the Mobirise comment
-          sed -i '/Mobirise Website Builder/d' index.html
+          find . -name "*.html" -type f -exec sed -i '/No Code Website Builder/,+5d' {} \;
+          find . -name "*.html" -type f -exec sed -i '/Mobirise Website Builder/d' {} \;
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
@@ -41,4 +38,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
