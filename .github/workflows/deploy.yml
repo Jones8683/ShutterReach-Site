@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy GitHub Pages
 
 on:
   push:
@@ -11,20 +11,25 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-
+    outputs:
+      artifact-path: ${{ steps.upload-artifact.outputs.artifact-path }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload static site artifact
+        id: upload-artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./   # Change this if your static files are in a subfolder
+          path: ./
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
       - name: Deploy to GitHub Pages
-        id: deploy
         uses: actions/deploy-pages@v4
