@@ -22,5 +22,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add index.html
-          git commit -m "Pre-build cleanup" || echo "No changes to commit"
+          git commit -m "Pre-Build Cleanup" || echo "No changes to commit"
           git push
