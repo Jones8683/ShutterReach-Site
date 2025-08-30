@@ -15,7 +15,7 @@ jobs:
         run: |
           sed -i '/<section class="display-7"/,/<\/section>/d' index.html
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
