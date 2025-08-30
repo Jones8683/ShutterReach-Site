@@ -61,7 +61,7 @@
     "versionPublish": "6.0.6",
     "imageResize": true,
     "screenshot": "screenshot.png",
-    "favicon": "@PROJECT_PATH@/assets/images/icon-128x128.png",
+    "favicon": "@PROJECT_PATH@/assets/images/adobe20express20-20file-128x128.png",
     "mbrsiteDomain": "316nlvp3up",
     "usedWebp": false,
     "robotsSwitcher": false,
