@@ -20,8 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Pre-Build Cleanup
-        run: sed -i '/mobirise.com\/builder\/ai-website-builder.html/,+10d' index.html
+      - name: Pre Build Cleanup
+        run: sed -i '/<section class="display-7"/,/<\/section>/d' index.html
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
