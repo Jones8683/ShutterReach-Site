@@ -6,71 +6,67 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>404 - Page Not Found</title>
 	<style>
+		html,
 		body {
-			background: #282c34;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+
+		body {
+			background: #222;
 			color: #fff;
-			font-family: 'Arial', sans-serif;
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			text-align: center;
-			padding: 100px 20px;
 		}
 
 		h1 {
-			font-size: 6em;
-			margin-bottom: 0;
+			font-size: 8em;
+			margin: 0;
+			color: #ffcc00;
+			text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 		}
 
-		p {
-			font-size: 1.5em;
-			margin: 20px 0;
+		p.small {
+			font-size: 1em;
+			color: #aaa;
+			margin: 5px 0 20px 0;
 		}
 
-		.joke {
-			font-size: 1.2em;
-			color: #61dafb;
-			margin-bottom: 30px;
+		p.main {
+			font-size: 1.4em;
+			margin: 20px 0 30px 0;
 		}
 
-		a {
-			color: #fff;
-			text-decoration: none;
-			border: 2px solid #fff;
-			padding: 10px 20px;
-			border-radius: 5px;
-			transition: 0.3s;
-		}
-
-		a:hover {
-			background: #fff;
-			color: #282c34;
-		}
-
-		/* floating animation */
-		.emoji {
-			font-size: 3em;
+		a.button {
 			display: inline-block;
-			animation: float 2s ease-in-out infinite;
+			padding: 15px 35px;
+			font-size: 1.2em;
+			font-weight: bold;
+			border-radius: 50px;
+			text-decoration: none;
+			background: linear-gradient(45deg, #ffcc00, #ff9900);
+			color: #222;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+			transition: all 0.3s ease;
 		}
 
-		@keyframes float {
-
-			0%,
-			100% {
-				transform: translateY(0);
-			}
-
-			50% {
-				transform: translateY(-20px);
-			}
+		a.button:hover {
+			transform: translateY(-3px) scale(1.05);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 		}
 	</style>
 </head>
 
 <body>
 	<h1>404</h1>
-	<p class="joke">Oops! Looks like this page went on vacation 😎</p>
-	<div class="emoji">🛸</div>
-	<p>Maybe try going back home?</p>
-	<a href="index.html">Take me home</a>
+	<p class="small">Not Found</p>
+	<p class="main">Snap! This page didn’t make the shot 📸</p>
+	<a class="button" href="index.html">Back to Home</a>
 </body>
 
 </html>
