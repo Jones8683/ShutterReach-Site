@@ -70,7 +70,10 @@
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "cookiesAlert": false,
-    "gdpr": false
+    "gdpr": false,
+    "publishType": "local",
+    "publishPath": "file:///C:/shutterreach-site",
+    "mbrsite": "mbrsite://%7B%22id%22%3A1815235%2C%22domain%22%3A%22xvsjipflfw.mobirisesite.com%22%7D"
   },
   "pages": {
     "index.html": {
